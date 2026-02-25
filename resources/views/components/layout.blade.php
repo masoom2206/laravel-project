@@ -2,81 +2,25 @@
   'title' => 'Laravel Project App'
 ])
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>{{ $title }}</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  {{-- <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"> --}}
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
   {{-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> --}}
+  {{-- @vite('resources/css/app.css') --}}
   <style>
-    .card {
-      background: #e3e3e3;
-      padding: 1rem;
-      text-align: center;
-      border-radius: 5px;
-    }
-    nav {
-      background: #333;
-      padding: 1rem;
-    }
-    nav a {
-      color: white;
-      margin-right: 1rem;
-      text-decoration: none;
-    }
-    main {
-      padding: 2rem;
-    }
-    .max-w-400 {
-      max-width: 400px;
-      margin: 0 auto;
-    }
-    .max-w-600 {
-      max-width: 600px;
-      margin: 0 auto;
-    }
-    .w-32 {
-      width: 8rem;
-    }
-    .h-32 {
-      height: 8rem;
-    }
-    .rounded-full {
-      border-radius: 9999px;
-    }
-    .mx-auto {
-      margin-left: auto;
-      margin-right: auto;
-    }
-    /* form {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      background: #f9f9f9;
-      padding: 1rem;
-      border-radius: 5px;
-    } */
-    .size-12 {
-      width: 48px;
-      height: 48px;
-    }
-    .border-gray-900\/25 {
-      border-color: 
-      color-mix(in oklab, var(--color-gray-900) 25%, transparent);
-    }
+
   </style>
 </head>
 <body class="bg-gray-200 p-6">
-  <nav>
-    <a href="/">Home</a>
-    <a href="/about">About Us</a>
-    <a href="/contact">Contact Us</a>
-    <a href="/services">Services</a>
-    <a href="/suggestion">Suggestion</a>
-  </nav>
-  <main class="max-w-screen-2xl m-auto p-6 bg-white rounded-lg shadow">
+  <x-nav />
+  <main class="max-w-screen-2xl m-auto p-6 bg-gray-100 rounded-lg shadow">
     {{ $slot }}
   </main>
 </body>
